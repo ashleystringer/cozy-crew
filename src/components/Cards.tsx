@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 import ImageAsset, { type ImageAsset as ImageAssetType } from './ImageAsset'
-// import Button from './Button'
+import Button from './Button'
 
 type Tone = 'default' | 'accent'
 type BadgeTone = 'success' | 'neutral'
@@ -79,7 +79,7 @@ function CardBody({
 export type CardProps = {
   tone?: Tone
   icon?: ReactNode
- image?: ImageAssetType
+  image?: ImageAssetType
   avatar?: ImageAssetType
   badge?: string
   badgeTone?: BadgeTone
