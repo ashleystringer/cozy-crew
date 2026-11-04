@@ -1,0 +1,37 @@
+.status-badge-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+}
+.status {
+    border-radius: 15px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-inter);
+    font-size: 10px;
+    font-weight: var(--font-weight-semibold);
+
+    &.pink {
+        background: #b92d73;
+        color: white;
+    }
+
+    &.purple {
+        background: #eee8f9;
+        color: #000;
+    }
+
+    &.green {
+        background: #eaf7f2;
+        color: #3f8462;
+    }
+
+    &.white {
+        background: #fff;
+        color: #000;
+        border: 1px solid #e7e4df;
+    }
+}
