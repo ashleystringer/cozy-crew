@@ -1,21 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import ProgressBar from '../components/ProgressBar';
-import { StatusBadge, CheckmarkStatusBadge } from '../components/StatusBadge';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-    <div>
-        <div class="status-badge-list">
-            <StatusBadge text="Recommended" variant='pink'/>
-            <StatusBadge text="In progress" variant='purple'/>
-            <CheckmarkStatusBadge text="Completed" variant="green"/>
-            <StatusBadge text="10 min" variant='white'/>
-        </div>
-        <br/>
-        <ProgressBar/>
-    </div>
 </Layout>

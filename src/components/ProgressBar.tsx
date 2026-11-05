@@ -2,14 +2,19 @@ import '../styles/progress-bar.css';
 
 import { useState } from "react";
 
-const ProgressBar = () => {
+type ProgressValueProps = {
+    label: string
+    progressValue: number
+}
 
-    const [value, setValue] = useState(15);
+const ProgressBar = ({label, progressValue}: ProgressValueProps) => {
+
+    const [value, setValue] = useState(progressValue);
 
     return (
     <div className='progress-content'>
         <div className='progress-heading'>
-            <label className='text-body3'>AI for UX Research</label>
+            <label className='text-body3'>{label}</label>
             <div className='text-body3 status-number'>{value}%</div>
         </div>
         <progress max={100} value={value} className='progress-bar'></progress>
