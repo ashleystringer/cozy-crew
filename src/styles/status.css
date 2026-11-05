@@ -1,37 +1,23 @@
-.status-badge-list {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: start;
-}
-.status {
-    border-radius: 15px;
-    padding: 5px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-inter);
-    font-size: 10px;
-    font-weight: var(--font-weight-semibold);
+@import 'tailwindcss';
 
-    &.pink {
-        background: #b92d73;
-        color: white;
+@layer components {
+    .status-badge-list {
+        @apply flex flex-row gap-[10px] justify-start;
     }
 
-    &.purple {
-        background: #eee8f9;
-        color: #000;
-    }
-
-    &.green {
-        background: #eaf7f2;
-        color: #3f8462;
-    }
-
-    &.white {
-        background: #fff;
-        color: #000;
-        border: 1px solid #e7e4df;
+    .status {
+        @apply rounded-2xl py-1 px-2 flex justify-center items-center text-[10px] font-semibold;
+        &.pink {
+            @apply bg-[#b92d73] text-[#fff];
+        }
+        &.purple {
+            @apply bg-[#eee8f9] text-[#000];
+        }
+        &.green {
+            @apply bg-[#eaf7f2] text-[#3f8462];  
+        }
+        &.white {
+            @apply bg-[#fff] text-[#000] border border-solid border-[#e7e4df];
+        }
     }
 }
