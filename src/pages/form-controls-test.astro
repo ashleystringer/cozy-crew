@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { RadioButton, Textarea, Select, Option} from '../components/FormControl';
+
+---
+
+<Layout>
+    <div>
+        <Select>
+            <Option value="ux&research" text="UX & Research"/>
+            <Option value="healthcare&nursing" text="Healthcare & Nursing"/>
+            <Option value="product&strateg" text="Product & Stategy"/>
+        </Select>
+    </div>
+    <br/>
+    <div>
+        <RadioButton label="beginner"/>
+        <RadioButton label="learning"/>
+        <RadioButton label="confident"/>
+        <RadioButton label="advanced"/>
+    </div>
+    <div>
+        <Textarea/>
+    </div>
+</Layout>

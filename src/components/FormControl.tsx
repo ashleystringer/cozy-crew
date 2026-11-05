@@ -1,26 +1,28 @@
-const FoemControls = () => {
-    //options
-    //radio buttons
-    //textareas
-    return (<></>);
+export const FormControl = () => {
+    return (<form>
+
+    </form>);
 }
 
-export const Select = () => {
+export const Select = ({children}) => {
     return (
         <div className="select-container">
-            <select className='select-tag' name="select">
-                <option className="option-tag" value="ux&research">UX & Research</option>
-                <option className="option-tag" value="healthcare&nursing">Healthcare & Nursing</option>
-                <option className="option-tag" value="product&strategy">Product & Stategy</option>
+            <select className='select-tag text-body3' name="select">
+                {children}
             </select>
         </div>
     );
 }
 
-export const RadioButtons = ({label, buttonName}) => {
+export const Option = ({value, text}) => {
+    return(<option className="option-tag" value="value">{text}</option>);
+}
+
+export const RadioButton = ({label, value, name}) => {
     return (<div className="radio-btn">
-        <label>
-            <input type="radio" name="test" aria-label="radio button"/>
+        <label className="radio-btn-label">
+            <input type="radio" value='test' name='name' aria-label="radio button"/>
+            {label}
         </label>
     </div>)
 }
