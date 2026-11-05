@@ -7,6 +7,16 @@
   --color-brand-hover: #c91068;
   --color-brand-disabled-bg: #f6c2de;
   --color-brand-disabled-text: #e895c3;
+
+  --color-accent-bg: #ece6fb;
+      /* Primary tokens */
+  --color-primary: #d6388a;
+  --color-secondary: #efe8fa;
+  --color-background: #faf9f8;
+  --color-foreground: #171719;
+  --color-muted: #f4f0ed;
+  --color-success: #18865f;
+
 }
 
 @layer components {
@@ -36,8 +46,6 @@
   .btn-quiet {
     @apply bg-transparent p-0 text-black underline-offset-4 hover:underline;
   }
-}
-  --color-accent-bg: #ece6fb;
 }
 
 @layer components {
@@ -78,14 +86,6 @@
   .badge-neutral {
     @apply bg-transparent p-0 text-xs font-semibold uppercase tracking-wide text-gray-500;
   }
-}
-    /* Primary tokens */
-    --color-primary: #d6388a;
-    --color-secondary: #efe8fa;
-    --color-background: #faf9f8;
-    --color-foreground: #171719;
-    --color-muted: #f4f0ed;
-    --color-success: #18865f;
 }
 
 .div-primary {
