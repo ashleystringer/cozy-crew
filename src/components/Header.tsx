@@ -3,6 +3,23 @@ import ImageAsset from "./ImageAsset";
 import Button from "./Button";
 import promptfulLogo from '../assets/promptful-logo.svg';
 
+const dropdownLinks = [
+    { title: "Pathfinder Quiz", path: "/#"},
+    { title: "My Learning Path", path: "/#"},
+    { title: "Resource Hub", path: "/#"},
+    { title: "Careers Library", path: "/#"},
+    { title: "My Progress", path: "/#"},
+]
+
+const DropdownMenu = () => {
+    return(<div className='learn-dropdown-menu'>
+        <div className='dropdown-container text-body3 font-semibold'>
+            {dropdownLinks.map((link, index) => {
+                return (<a href={`${link.path}`} key={index}>{link.title}</a>)
+            })}
+        </div>
+    </div>);
+}
 
 const Header = () => {
     return (<header className='navbar'>
@@ -11,7 +28,10 @@ const Header = () => {
         </div>
         <div className="link-list">
             <a href="#" className='text-body1'>Home</a>
-            <a href="#" className='text-body1'>Learn <span className="learn-dropdown-arrow"></span></a>
+            <div className='learn-link-wrapper'>
+                <a href="#" className='learn-link text-body1'>Learn <span className='learn-dropdown-arrow'></span></a>
+                <DropdownMenu/>
+            </div>
             <a href="#" className='text-body1'>Communities</a>
             <a href="#" className='text-body1'>About</a>
         </div>

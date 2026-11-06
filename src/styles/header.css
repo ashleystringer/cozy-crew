@@ -4,6 +4,7 @@ unselected link - #4b494c
 unselected link underline - #d0a4bf
 navbar border - #e7e4df
 dropdown background - #fcf1f8
+hamburger button - #171719
 */
 
 .navbar {
@@ -64,9 +65,19 @@ dropdown background - #fcf1f8
     transform: scaleX(1);
 }
 
+.learn-link-wrapper{
+    position: relative;
+}
+
+.learn-link {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
 .learn-dropdown-arrow {
     border: solid #4b494c;
-    border-width: 0 3px 3px 0;
+    border-width: 0 1.5px 1.5px 0;
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
@@ -75,17 +86,33 @@ dropdown background - #fcf1f8
 .learn-dropdown-menu {
     display: none;
     position: absolute;
-    width: 300px;
-    height: 300px;
-    border: .5px solid #4b494c;
+    width: 230px;
+    height: 230px;
+    padding: 10px 15px;
+    top: 45px;
+    left: 0;
+    border: .5px solid #e7e4df;
+    background: white;
+    z-index: 1001;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.learn-dropdown-menu-container {
+.dropdown-container {
     display: flex;
+    justify-content: start;
     flex-direction: column;
     background: #fff;
     color: #4b494c;
-    gap: 10px;
+}
+
+.dropdown-container a {
+    padding: 10px 5px;
+}
+
+.dropdown-container a:hover {
+    border-radius: 10px;
+    background: #fcf1f8;
+    color: #b92d73;
 }
 
 .button-list {
@@ -93,4 +120,16 @@ dropdown background - #fcf1f8
     flex-direction: row;
     justify-content: space-between;
     gap: 20px;
+}
+
+.hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    height: 55px;
+
+    &.bar {
+        width: 100%;
+        background: #171719;
+    }
 }
