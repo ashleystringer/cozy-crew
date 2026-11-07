@@ -88,6 +88,10 @@
     --color-success: #18865f;
 }
 
+body {
+  background: var(--color-background);
+}
+
 .div-primary {
     background: var(--color-primary);
 }
