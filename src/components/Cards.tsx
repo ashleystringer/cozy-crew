@@ -7,7 +7,7 @@ type BadgeTone = 'success' | 'neutral'
 
 type Action = {
   label: string
-  variant?: 'primary' | 'secondary' | 'quiet'
+  variant?: 'primary' | 'secondary' | 'ghost' | 'link'
   href?: string
   onClick?: () => void
   icon?: ReactNode

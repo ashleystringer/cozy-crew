@@ -22,31 +22,29 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full
-           font-semibold transition-colors duration-150
-           disabled:cursor-not-allowed;
+    @apply @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full
+         font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-150
+         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
+         disabled:pointer-events-none disabled:opacity-50;
   }
 
   /* sizes */
-  .btn-md { @apply px-6 py-3 text-base; }
-  .btn-sm { @apply px-4 py-2 text-sm; }
-  .btn-icon { @apply h-11 w-11 rounded-full p-0; }
+  .btn-md { @apply h-11 px-6 text-sm; }
+  .btn-sm { @apply h-10 px-5 text-sm; }
+  .btn-icon { @apply size-10 p-0; }
 
   /* variants */
-  .btn-primary {
-    @apply bg-primary text-black hover:bg-brand-hover;
-  }
-  .btn-primary:disabled {
-    @apply bg-brand-disabled-bg text-brand-disabled-text;
-  }
-
-  .btn-secondary {
-    @apply border border-black bg-white text-black hover:bg-gray-50;
-  }
-
-  .btn-quiet {
-    @apply bg-transparent p-0 text-black underline-offset-4 hover:underline;
-  }
+.btn-primary {
+  @apply bg-primary text-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20;
+}
+.btn-secondary {
+  @apply border border-foreground bg-transparent text-foreground hover:bg-muted;
+}
+.btn-ghost {
+  @apply bg-transparent hover:bg-muted;
+}
+.btn-link {
+  @apply h-auto bg-transparent p-0 text-primary underline-offset-4 hover:underline;
 }
  
 
@@ -54,7 +52,7 @@
 @layer components {
   /* cards */
   .card {
-    @apply flex flex-col gap-3 rounded-2xl border border-black/5 bg-white p-6 shadow-sm;
+   @apply flex flex-col gap-3 rounded-[0.875rem] border border-[#e8e4df] bg-white p-6 shadow-sm;
   }
   .card-accent {
     @apply border-transparent bg-accent-bg;
