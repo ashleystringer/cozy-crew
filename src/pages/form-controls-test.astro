@@ -1,25 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { RadioButton, Textarea, Select, Option} from '../components/FormControl';
+import { RadioGroup, Textarea, Select, Option} from '../components/FormControl';
 
 ---
 
 <Layout>
-    <div>
-        <Select>
-            <Option value="ux&research" text="UX & Research"/>
-            <Option value="healthcare&nursing" text="Healthcare & Nursing"/>
-            <Option value="product&strateg" text="Product & Stategy"/>
+    <div class="form-control-display">
+        <h3 class="font-bold">Role</h3>
+        <div class="subhead text-body3">Lists show all choices at once in one place.</div>
+        <br/>
+        <Select name="select-example" label="select-example" id="select-example-id">
+            <Option label="UX & Research" value="ux&research" />
+            <Option label="Healthcare & Nursing" value="healthcare&nursing"/>
+            <Option label="Product & Stategy" value="product&strateg"/>
         </Select>
     </div>
     <br/>
-    <div>
-        <RadioButton label="beginner"/>
-        <RadioButton label="learning"/>
-        <RadioButton label="confident"/>
-        <RadioButton label="advanced"/>
+    <div class="form-control-display">
+        <h3 class="font-bold">Comfort level</h3>
+        <div class="subhead text-body3">Radio groups denote one clear choice.</div>
+        <br/>
+        <RadioGroup name="radio-group" options={[
+            {value: 'beginner', label: 'Beginner'},
+            {value: 'learning', label: 'Learning'},
+            {value: 'intermediate', label: 'Intermediate'},
+            {value: 'advanced', label: 'Advanced'},
+        ]}/>
     </div>
-    <div>
-        <Textarea/>
+    <br/>
+    <div class="form-control-display">
+        <h3 class="font-bold">Reflection</h3>
+        <div class="subhead text-body3">Longer input feels supportive.</div>
+        <br/>
+        <Textarea name="textarea-example" label="" rows={4} cols={4} placeholder="What could you try in your work this week?"/>
     </div>
 </Layout>

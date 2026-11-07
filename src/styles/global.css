@@ -10,35 +10,15 @@
     --color-foreground: #171719;
     --color-muted: #f4f0ed;
     --color-success: #18865f;
+
+    --font-lora: 'Lora';
+    --font-inter: 'Inter';
 }
 
-.div-primary {
-    background: var(--color-primary);
-}
+    body {
+      background: var(--color-background);
+    }
 
-.div-secondary {
-    background: var(--color-secondary);
-}
-
-.div-background {
-    background: var(--color-background);
-}
-
-.div-foreground {
-    background: var(--color-foreground);
-}
-
-.div-muted {
-    background: var(--color-muted);
-}
-
-.div-success {
-    background: var(--color-success);
-    --font-lora: "Lora";
-    --font-inter: "Inter";
-}
-
-@layer base {
     h1 {
       font-family: var(--font-lora);
       font-size: clamp(42px, 5vw, 72px);
@@ -81,4 +61,3 @@
       line-height: 150%;
       letter-spacing: 0.08em;
     }
-}
