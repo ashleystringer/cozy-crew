@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import Footer from '../components/Footer.astro'
 ---
 
 <!doctype html>
@@ -12,8 +13,11 @@ import '../styles/global.css'
         <meta name="generator" content={Astro.generator} />
         <title>Astro Basics</title>
     </head>
-    <body>
+    <body class="flex min-h-screen flex-col">
+        <main class="flex-1">
         <slot />
+    </main>
+        <Footer />
     </body>
 </html>
 
