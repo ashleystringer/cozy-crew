@@ -107,6 +107,10 @@
 
 
 
+body {
+  background: var(--color-background);
+}
+
 .div-primary {
   background: var(--color-primary);
 }
