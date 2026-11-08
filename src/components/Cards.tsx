@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import ImageAsset, { type ImageAsset as ImageAssetType } from './ImageAsset'
+import ImageAsset from './ImageAsset'
 import Button from './Button'
 
 type Tone = 'default' | 'accent'
