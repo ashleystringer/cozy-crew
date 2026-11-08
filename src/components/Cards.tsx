@@ -1,13 +1,13 @@
 import type { ReactNode } from "react"
-import ImageAsset, { type ImageAsset as ImageAssetType } from './ImageAsset'
-// import Button from './Button'
+import ImageAsset from './ImageAsset'
+import Button from './Button'
 
 type Tone = 'default' | 'accent'
 type BadgeTone = 'success' | 'neutral'
 
 type Action = {
   label: string
-  variant?: 'primary' | 'secondary' | 'quiet'
+  variant?: 'primary' | 'secondary' | 'ghost' | 'link'
   href?: string
   onClick?: () => void
   icon?: ReactNode
@@ -79,7 +79,7 @@ function CardBody({
 export type CardProps = {
   tone?: Tone
   icon?: ReactNode
- image?: ImageAssetType
+  image?: ImageAssetType
   avatar?: ImageAssetType
   badge?: string
   badgeTone?: BadgeTone

@@ -42,7 +42,7 @@ function NativeButton({ type = "button", ...rest }) {
 export default function Button({
   variant = "primary",
   size = "md",
-  icon = null,
+  icon,
   iconPosition = "start",
   href,
   children,
