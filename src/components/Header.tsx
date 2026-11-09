@@ -70,23 +70,31 @@ const Header = () => {
             </label>
 
             <nav className="nav-menu" aria-label="Main navigation">
-                <div className="link-list">
-                    <a href="#" className="text-body1">
-                        Home
-                    </a>
-                    <div className="learn-link-wrapper">
-                        <DropdownMenu />
-                    </div>
-                    <a href="#" className="text-body1">
-                        Communities
-                    </a>
-                    <a href="#" className="text-body1">
-                        About
-                    </a>
-                    <div className="button-list-mobile">
+                <ul className="link-list">
+                    <li>
+                        <a href="#" className="text-body1">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <div className="learn-link-wrapper">
+                            <DropdownMenu />
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" className="text-body1">
+                            Communities
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" className="text-body1">
+                            About
+                        </a>
+                    </li>
+                    <li className="button-list-mobile">
                         <Button variant="quiet" size="md" href="/#">Log in &#10140;</Button>
-                    </div>
-                </div>
+                    </li>
+                </ul>
                  </nav>
                 <div className="button-list-desktop">
                     <Button variant="quiet" size="md" href="/#">Log in &#10140;</Button>
