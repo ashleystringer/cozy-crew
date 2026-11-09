@@ -17,6 +17,8 @@
   --color-muted: #f4f0ed;
   --color-success: #18865f;
 
+  --font-lora: "Lora";
+  --font-inter: "Inter";
 }
 
 @layer components {
@@ -110,8 +112,6 @@
 
 .div-success {
     background: var(--color-success);
-    --font-lora: "Lora";
-    --font-inter: "Inter";
 }
 
 @layer base {
