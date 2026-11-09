@@ -203,16 +203,53 @@ hamburger button - #171719
 
 @media (min-width: 56rem) {
     .navbar {
-        padding: 1.75rem 5rem 1.5rem;
+        padding: 20px 28px;
     }
 
     .hamburger-btn {
-        width: 3.25rem;
-        height: 3.25rem;
+        display: none;
     }
 
     .nav-menu {
-        top: calc(100% + 1px);
-        padding: 1.75rem 5rem 2rem;
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    .link-list {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        gap: 42px;
+    }
+
+    .button-list {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        gap: 20px;
+    }
+
+    .learn-link-wrapper {
+        width: auto;
+    }
+
+    .learn-dropdown-menu {
+        position: absolute;
+        width: 230px;
+        padding: 10px 15px;
+        top: 42px;
+        left: 0;
+        margin-top: 0;
+        border: 0.5px solid #e7e4df;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .dropdown-container a {
+        padding: 10px 5px;
     }
 }
