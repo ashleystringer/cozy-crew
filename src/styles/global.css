@@ -6,14 +6,19 @@
   --color-brand-hover: #c91068;
   --color-brand-disabled-bg: #f6c2de;
   --color-brand-disabled-text: #e895c3;
+
   --color-accent-bg: #ece6fb;
-  /* Primary tokens */
+      /* Primary tokens */
   --color-primary: #d6388a;
   --color-secondary: #efe8fa;
   --color-background: #faf9f8;
   --color-foreground: #171719;
   --color-muted: #f4f0ed;
   --color-success: #18865f;
+
+  --font-lora: "Lora";
+  --font-inter: "Inter";
+  --color-accent-bg: #ece6fb;
 
   /* Fonts */
   --font-serif: "Lora", serif;
@@ -132,7 +137,7 @@ body {
 }
 
 .div-success {
-  background: var(--color-success);
+    background: var(--color-success);
 }
 
 @layer base {
