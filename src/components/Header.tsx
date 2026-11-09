@@ -1,7 +1,7 @@
-import '../styles/header.css';
-import ImageAsset from './ImageAsset';
-import Button from './Button';
-import promptfulLogo from '../assets/promptful-logo.svg';
+import '../styles/header.css'
+import ImageAsset from './ImageAsset'
+import Button from './Button'
+import promptfulLogo from '../assets/promptful-logo.svg'
 
 const dropdownLinks = [
     { title: 'Pathfinder Quiz', path: '/#' },
@@ -9,7 +9,7 @@ const dropdownLinks = [
     { title: 'Resource Hub', path: '/#' },
     { title: 'Careers Library', path: '/#' },
     { title: 'My Progress', path: '/#' },
-];
+]
 
 const DropdownMenu = () => {
     return (
@@ -20,22 +20,36 @@ const DropdownMenu = () => {
                         <a href={link.path} key={index}>
                             {link.title}
                         </a>
-                    );
+                    )
                 })}
             </div>
         </div>
-    );
-};
+    )
+}
 
 const Header = () => {
     return (
         <header className="navbar">
             <div className="image-container">
-                <ImageAsset asset={promptfulLogo} alt="Prompful Logo" width={155} height={150} />
+                <ImageAsset
+                    asset={promptfulLogo}
+                    alt="Prompful Logo"
+                    width={155}
+                    height={150}
+                />
             </div>
 
-            <input id="nav-toggle" className="nav-toggle" type="checkbox" aria-label="Toggle navigation menu" />
-            <label htmlFor="nav-toggle" className="hamburger-btn" aria-hidden="true">
+            <input
+                id="nav-toggle"
+                className="nav-toggle"
+                type="checkbox"
+                aria-label="Toggle navigation menu"
+            />
+            <label
+                htmlFor="nav-toggle"
+                className="hamburger-btn"
+                aria-hidden="true"
+            >
                 <span className="bar"></span>
                 <span className="bar"></span>
                 <span className="bar"></span>
@@ -65,7 +79,7 @@ const Header = () => {
                 </div>
             </nav>
         </header>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header
