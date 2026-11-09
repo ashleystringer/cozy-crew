@@ -212,15 +212,17 @@ hamburger button - #171719
 
     .nav-menu {
         position: static;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
         align-items: center;
-        gap: 40px;
+        width: 100%;
+        margin-left: 2.5rem;
         padding: 0;
         border-bottom: 0;
     }
 
     .link-list {
+        grid-column: 2;
         flex-direction: row;
         align-items: center;
         width: auto;
@@ -228,6 +230,8 @@ hamburger button - #171719
     }
 
     .button-list {
+        grid-column: 3;
+        justify-self: end;
         flex-direction: row;
         align-items: center;
         width: auto;
