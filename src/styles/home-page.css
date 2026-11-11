@@ -1,0 +1,48 @@
+/*
+paragraph font - #504b50
+path and bottom section background - #eee8f9
+*/
+
+
+
+@media (min-width: 37.5rem) {}
+@media (min-width: 56rem) {
+    .section-container {
+        display: flex;
+        flex-direction: row;
+        padding: 45px;
+        gap: 100px;
+    }
+    .left-container-hero {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .image-container-hero {
+        width: 600px;
+        border-radius: 50%;
+    }
+    .hero-btn {
+        max-width: 150px;
+    }
+    .section-container-path {
+        display: flex;
+        flex-direction: row;
+        padding: 45px;
+        gap: 100px;
+        background: #eee8f9;
+    }
+    .path-section-card {
+        background: #fff;
+
+    }
+
+    .path-section-card h3{ 
+        font-size: 18px;
+    }
+
+    .communities-section {
+        background: #eee8f9;
+    }
+}
