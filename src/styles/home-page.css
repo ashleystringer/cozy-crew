@@ -7,8 +7,158 @@ supportive communities path icon background - #edfafa
 exploration card icon background (and personalized lessons path icon) - #fcf1f8
 */
 
+section {
+    padding: 25px 15px;
+}
+
 .p-text {
     color: #504b50;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.left-container-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    & .text-container {
+        
+    }
+}
+.image-container-hero {
+    max-width: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.hero-btn {
+    max-width: 150px;
+}
+.path-secton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-container-path {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        width: 95%;
+        border-radius: 15px;
+        background: #eee8f9;
+}
+.left-container-path {
+        display: flex;
+        flex-direction: column;
+        max-width: 360px;
+        gap: 15px;
+    }
+.path-section-card {
+        padding: 40px 20px;
+        border-radius: 15px;
+        width: 90%;
+        height: 250px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        display: flex; 
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+}
+.path-section-card ol {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+    color: var(--color-primary);
+}
+.path-section-card ol li span {
+    color: var(--color-foreground);
+}
+
+.path-section-card {
+    background: #fff;
+
+}
+.path-section-card h3{ 
+    font-size: 18px;
+}
+
+.righthand-flourish { 
+    display: none;
+}
+
+.path-card-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+.path-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    gap: 15px;
+    & .text-container {
+        text-align: center;
+        width: 250px;
+    }
+}
+.exploration-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.exploration-card-list {        
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;   
+}
+.exploration-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    border-radius: 10px;
+    border: 1px solid #e7e4df;
+    background: #fff;
+    gap: 10px;
+    cursor: pointer;
+    transition-property: box-shadow, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+
+    & .icon {
+        background: #fcf1f8;
+        padding: 10px;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+    }
+}
+.exploration-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .communities-section {
+    background: #eee8f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+
+    & .text-container {
+        text-align: center;
+    }
 }
 
 .tag {
@@ -23,7 +173,6 @@ exploration card icon background (and personalized lessons path icon) - #fcf1f8
         padding: 25px 20px;
     }
     .section-container {
-        display: flex;
         flex-direction: row;
         padding: 45px;
         gap: 100px;
@@ -40,24 +189,55 @@ exploration card icon background (and personalized lessons path icon) - #fcf1f8
     }
     .image-container-hero {
         width: 600px;
-        border-radius: 50%;
+        border-radius: 15px;
+        overflow: hidden;
     }
     .hero-btn {
         max-width: 150px;
     }
-    .section-container-path {
+    .path-secton {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-container-path {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
         padding: 45px;
         gap: 100px;
+        width: 95%;
         border-radius: 15px;
         background: #eee8f9;
+    }
+    .left-container-path {
+        display: flex;
+        flex-direction: column;
+        max-width: 360px;
+        gap: 15px;
     }
     .path-section-card {
         padding: 40px 80px;
         border-radius: 15px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        min-width: 530px;
+        display: flex; 
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
     }
+    .path-section-card ol {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+        color: var(--color-primary);
+    }
+    .path-section-card ol li span {
+        color: var(--color-foreground);
+    }
+
     .path-section-card {
         background: #fff;
 
@@ -67,8 +247,10 @@ exploration card icon background (and personalized lessons path icon) - #fcf1f8
     }
 
     .path-card-list {
+        margin-top: 20px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
     }
     .path-card {
         display: flex;
@@ -99,11 +281,31 @@ exploration card icon background (and personalized lessons path icon) - #fcf1f8
             background: #edfafa;
         }
     }
+    .path-card:not(:last-child) {
+        border-right: 1px solid #e7e4df;
+    }
+
+    .righthand-flourish { 
+        font-family: var(--font-serif); 
+        font-style: italic; 
+        display: flex;
+        flex-direction: column;
+    }
+    .righthand-flourish .flourish-arrow { 
+        transform: rotate(90deg); 
+        width: 20px; 
+    }
+
+    .exploration-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .exploration-card-list {        
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 25px;
-        
+        gap: 25px;   
     }
     .exploration-card {
         display: flex;
@@ -115,6 +317,10 @@ exploration card icon background (and personalized lessons path icon) - #fcf1f8
         border: 1px solid #e7e4df;
         background: #fff;
         gap: 10px;
+        cursor: pointer;
+        transition-property: box-shadow, transform;
+        transition-duration: 200ms;
+        transition-timing-function: ease;
 
         & .icon {
             background: #fcf1f8;
@@ -124,6 +330,10 @@ exploration card icon background (and personalized lessons path icon) - #fcf1f8
             border-radius: 50%;
         }
     }
+    .exploration-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        transform: translateY(-2px);
+      }
     .communities-section {
         background: #eee8f9;
         display: flex;

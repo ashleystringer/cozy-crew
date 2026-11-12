@@ -15,6 +15,8 @@ import career_education from '../assets/promptful-assets/icons/in-use/career-edu
 import arrow_right_pink_20 from '../assets/promptful-assets/icons/library/arrow-right-20-pink.svg';
 import arrow_right_ink_16 from '../assets/promptful-assets/icons/library/arrow-right-16-ink.svg';
 
+import corner_down_left_44_pink from '../assets/promptful-assets/icons/library/corner-down-left-44-pink.svg';
+
 const path_cards = [
     { icon: personalized_lessons_icon, bg_color: "#fcf1f8", title: "Personalized Lessons", text: "Learn AI skills tailored to your job and career goals."},
     { icon: real_world_icon, bg_color: "#eff0fe", title: "Real-world application", text: "Build confidence in using AI in your work."},
@@ -55,19 +57,21 @@ const HomePage = () => {
                 <div className='left-container-path'>
                     <div className='tag text-body3'>YOUR OWN PATH</div>
                     <h2 className='font-bold'>Courses designed for you</h2>
-                    <p className='text-container text-body2 p-text'>Set your career area, current AI skill level, and daily learning time to get personalized AI lessons with practical applications and real-world exercises.</p>
+                    <p className='text-container text-body3 p-text'>Set your career area, current AI skill level, and daily learning time to get personalized AI lessons with practical applications and real-world exercises.</p>
                     <Button>Take the Pathfinder Quiz to create my learning path</Button>
                 </div>
-                <div>
                     <div className="path-section-card">
                         <h3 className='font-bold'>How our 3-question quiz works</h3>
-                        <ul>
-                            <li className="text-body3">Choose your career area.</li>
-                            <li className="text-body3">Set your current AI skill level.</li>
-                            <li className="text-body3">Choose your daily learning time.</li>
-                        </ul>
+                        <ol>
+                            <li className="text-body3">1. <span>Choose your career area.</span></li>
+                            <li className="text-body3">2. <span>Set your current AI skill level.</span></li>
+                            <li className="text-body3">3. <span>Choose your daily learning time.</span></li>
+                        </ol>
                     </div>
-                    <div className="righthand-flourish"></div>
+                <div className="righthand-flourish">
+                    <div>Your goals.</div>
+                    <div>Your path.</div>
+                    <div><ImageAsset asset={corner_down_left_44_pink} alt="corner arrow"/></div>
                 </div>
             </div>
             <div className='path-card-list'>
