@@ -1,12 +1,23 @@
 /*
 paragraph font - #504b50
 path and bottom section background - #eee8f9
+exploration card and path card border - #e7e4df
+real-world application path icon background - #eff0fe
+supportive communities path icon background - #edfafa
+exploration card icon background (and personalized lessons path icon) - #fcf1f8
 */
 
-
+.tag {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: 11px;
+}
 
 @media (min-width: 37.5rem) {}
 @media (min-width: 56rem) {
+    section {
+        padding: 25px 20px;
+    }
     .section-container {
         display: flex;
         flex-direction: row;
@@ -31,6 +42,7 @@ path and bottom section background - #eee8f9
         flex-direction: row;
         padding: 45px;
         gap: 100px;
+        border-radius: 15px;
         background: #eee8f9;
     }
     .path-section-card {
@@ -42,7 +54,73 @@ path and bottom section background - #eee8f9
         font-size: 18px;
     }
 
+
+    .path-card-list {
+        display: flex;  /* MIGHT HAVE TO CHANGE TO GRID */
+        flex-direction: row;
+    }
+    .path-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .path-icon {
+        padding: 10px;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+
+        & .pink{
+            background: #fcf1f8;
+        }
+        & .purple {
+            background: #eff0fe;
+        }
+        & .blue {
+            background: #edfafa;
+        }
+    }
+    .exploration-card-list {
+        display: flex; /* MIGHT HAVE TO CHANGE TO GRID */
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    .exploration-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 270px;
+        height: 170px;
+        border-radius: 10px;
+        border: 1px solid #e7e4df;
+        background: #fff;
+        gap: 10px;
+
+        & .icon {
+            background: #fcf1f8;
+            padding: 10px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+        }
+    }
     .communities-section {
         background: #eee8f9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+
+        & .text-container {
+            width: 600px;
+            text-align: center;
+        }
     }
 }
