@@ -7,6 +7,10 @@ supportive communities path icon background - #edfafa
 exploration card icon background (and personalized lessons path icon) - #fcf1f8
 */
 
+.p-text {
+    color: #504b50;
+}
+
 .tag {
     color: var(--color-primary);
     font-weight: var(--font-weight-bold);
@@ -29,6 +33,10 @@ exploration card icon background (and personalized lessons path icon) - #fcf1f8
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        & .text-container {
+            
+        }
     }
     .image-container-hero {
         width: 600px;
@@ -46,31 +54,40 @@ exploration card icon background (and personalized lessons path icon) - #fcf1f8
         background: #eee8f9;
     }
     .path-section-card {
+        padding: 40px 80px;
+        border-radius: 15px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    .path-section-card {
         background: #fff;
 
     }
-
     .path-section-card h3{ 
         font-size: 18px;
     }
 
-
     .path-card-list {
-        display: flex;  /* MIGHT HAVE TO CHANGE TO GRID */
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
     .path-card {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+        height: 250px;
+        gap: 15px;
+        & .text-container {
+            text-align: center;
+            width: 250px;
+        }
     }
     .path-icon {
         padding: 10px;
-        width: 55px;
-        height: 55px;
+        width: 65px;
+        height: 65px;
         border-radius: 50%;
+        background: #fcf1f8;
 
         & .pink{
             background: #fcf1f8;
@@ -82,19 +99,17 @@ exploration card icon background (and personalized lessons path icon) - #fcf1f8
             background: #edfafa;
         }
     }
-    .exploration-card-list {
-        display: flex; /* MIGHT HAVE TO CHANGE TO GRID */
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    .exploration-card-list {        
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         gap: 25px;
+        
     }
     .exploration-card {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-width: 270px;
         height: 170px;
         border-radius: 10px;
         border: 1px solid #e7e4df;
