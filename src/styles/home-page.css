@@ -38,7 +38,71 @@ section {
 .hero-btn {
     max-width: 150px;
 }
+
 .path-secton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container-path {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 95%;
+    border-radius: 15px;
+    background: #eee8f9;
+    padding: 20px;
+    gap: 20px;
+}
+
+.left-container-path {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.path-section-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 420px);
+    padding: clamp(14px, 3vw, 18px) clamp(18px, 4vw, 28px);
+    box-sizing: border-box;
+    border-radius: 999px;
+    text-align: center;
+    white-space: normal;
+}
+
+.path-section-card {
+    padding: 32px 20px;
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.path-section-card ol {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+    padding-left: 0;
+    color: var(--color-primary);
+}
+
+.path-section-card ol li span {
+    color: var(--color-foreground);
+}
+
+/*.path-secton {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,6 +131,7 @@ section {
         flex-direction: column;
         justify-content: start;
         align-items: start;
+        background: #fff;
 }
 .path-section-card ol {
     display: flex;
@@ -77,12 +142,8 @@ section {
 }
 .path-section-card ol li span {
     color: var(--color-foreground);
-}
+}*/
 
-.path-section-card {
-    background: #fff;
-
-}
 .path-section-card h3{ 
     font-size: 18px;
 }
@@ -174,6 +235,8 @@ section {
     }
     .section-container {
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
         padding: 45px;
         gap: 100px;
     }
@@ -207,9 +270,12 @@ section {
         grid-template-rows: none;
         padding: 45px;
         gap: 100px;
-        width: 95%;
+        /*width: 95%;*/
         border-radius: 15px;
         background: #eee8f9;
+    }
+    .section-container .section-container-path {
+        width: min(100%, 1436px);
     }
     .left-container-path {
         display: flex;
@@ -221,7 +287,6 @@ section {
         padding: 40px 80px;
         border-radius: 15px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        min-width: 530px;
         display: flex; 
         flex-direction: column;
         justify-content: start;
@@ -245,7 +310,9 @@ section {
     .path-section-card h3{ 
         font-size: 18px;
     }
-
+    .section-container .path-card-list {
+        width: min(100%, 1436px);
+    }
     .path-card-list {
         margin-top: 20px;
         display: grid;
@@ -299,10 +366,33 @@ section {
     .exploration-section {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .exploration-section .section-container {
+        width: min(100%, 1436px);
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .exploration-section .text-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
         gap: 20px;
     }
 
-    .exploration-card-list {        
+    .exploration-section-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 45px;
+    }
+
+    .exploration-card-list { 
+        width: 100%;       
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 25px;   

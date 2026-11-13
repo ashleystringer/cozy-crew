@@ -53,12 +53,13 @@ const HomePage = () => {
             
         </section>
         <section className='path-section'>
+            <div className='section-container'>
             <div className='section-container-path'>
                 <div className='left-container-path'>
                     <div className='tag text-body3'>YOUR OWN PATH</div>
                     <h2 className='font-bold'>Courses designed for you</h2>
                     <p className='text-container text-body3 p-text'>Set your career area, current AI skill level, and daily learning time to get personalized AI lessons with practical applications and real-world exercises.</p>
-                    <Button>Take the Pathfinder Quiz to create my learning path</Button>
+                    <Button className='path-section-btn'>Take the Pathfinder Quiz to create my learning path</Button>
                 </div>
                     <div className="path-section-card">
                         <h3 className='font-bold'>How our 3-question quiz works</h3>
@@ -74,20 +75,28 @@ const HomePage = () => {
                     <div><ImageAsset asset={corner_down_left_44_pink} alt="corner arrow"/></div>
                 </div>
             </div>
-            <div className='path-card-list'>
-                   {path_cards.map(card => (
-                        <PathCard icon={card.icon} bg_color={card.bg_color} title={card.title} text={card.text}/>
-                   ))}
+            </div>
+            <div className='section-container'>
+                <div className='path-card-list'>
+                    {path_cards.map(card => (
+                            <PathCard icon={card.icon} bg_color={card.bg_color} title={card.title} text={card.text}/>
+                    ))}
                 </div>
+            </div>
         </section>
         <section className='exploration-section'>
-            <div className='tag text-body3'>COMMON LEARNING PATHS</div>
-            <h2 className='font-bold'>Explore by career area</h2>
-            <p className='p-text'>Skip the Pathfinder Quiz and dive straight into learning in your field.</p>
-            <div className='exploration-card-list'>
-                {exploration_cards.map(card => (
-                    <ExplorationCard icon={card.icon} title={card.title}/>
-                ))}
+        <div className='section-container'>
+            <div className='text-container'>
+                <div className='tag text-body3'>COMMON LEARNING PATHS</div>
+                <h2 className='font-bold'>Explore by career area</h2>
+                <p className='p-text'>Skip the Pathfinder Quiz and dive straight into learning in your field.</p>
+            </div>
+
+                <div className='exploration-card-list'>
+                    {exploration_cards.map(card => (
+                        <ExplorationCard icon={card.icon} title={card.title}/>
+                    ))}
+                </div> 
             </div>
             <Button variant='secondary'>Explore our Career Library </Button>
         </section>
