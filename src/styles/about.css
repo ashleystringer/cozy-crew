@@ -1,3 +1,7 @@
+/*
+- purple section backround - #eee8f9
+*/
+
 section {
     padding: 25px 15px;
 }
@@ -49,6 +53,78 @@ section {
     overflow: hidden;
 }
 
+.mission-section {
+    background: #eee8f9;
+}
+.mission-section .section-container {
+    text-align: center;
+    gap: 15px;
+}
+
+.story-section .section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.problem-section .left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.learning-section .section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.impact-section .section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.teammember-section .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.teammember-section .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.teammember-section .member-card-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.quiz-section {
+    background: #eee8f9;
+}
+.quiz-section .section-container, .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.button-container {
+    gap: 10px;
+}
 
 @media (min-width: 37.5rem) {
     
@@ -67,5 +143,35 @@ section {
     } 
     .left-container-hero {
         width: 600px;
+    }
+
+    .mission-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mission-section .section-container {
+        flex-direction: column;
+        width: 800px;
+    }
+    .problem-section .left-container {
+        width: 600px;
+    }
+
+    .teammember-section .section-container { 
+
+    }
+
+    .teammember-section .member-card-list {
+        flex-direction: row;
+
+    }
+
+    .quiz-section .section-container {
+        gap: 15px;
+    }
+    .button-container {
+        flex-direction: row;
     }
 }
