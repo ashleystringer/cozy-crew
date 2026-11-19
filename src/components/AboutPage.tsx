@@ -19,6 +19,20 @@ const team_members = [
 ];
 
 
+const learning_cards = [
+    {tag: "01", title: "Start with your role", description: "We use your chosen career area to create lessons that matter in your field."},
+    {tag: "02", title: "Learn in small steps", description: "Short lessons fit into the busy schedules of work, care, and life."},
+    {tag: "03", title: "Grow with people", description: "Live workshops with peers and mentors turn isolated learning into shared confidence."},
+    {tag: "04", title: "Connect with opportunity", description: "Learners can now use their new AI expertise."},
+];
+
+const impact_cards = [
+    {title: "12.4k", description: "Women in our many communities"},
+    {title: "87%", description: "Use a skill within 30 days"},
+    {title: "3.2×", description: "More job clarity"},
+    {title: "91%", description: "Feel more confident about using AI"},
+];
+
 const AboutPage = () => {
     return (<>
         <section className="hero-section">
@@ -83,6 +97,11 @@ const AboutPage = () => {
                 <div className='tag'>HOW WE WORK</div>
                 <h2 className='font-bold'>Learning designed to increase momentum</h2>
                 <p className='text-body3 p-text'>Promptful combines elements that traditional learning platforms leave separate.</p>
+                <div className='learning-cards-list'>
+                    {learning_cards.map(card => (
+                        <LearningCard tag={card.tag} title={card.title} description={card.description}/>
+                    ))}
+                </div>
             </div>
         </section>
         <section className="values-section">
@@ -94,7 +113,11 @@ const AboutPage = () => {
             <div className='section-container'>
                 <div className='tag'>OUR IMPACT SO FAR</div>
                 <h2 className='font-bold'>Skills you can use. Confidence you can see.</h2>
-                <div className='card-lst'></div>
+                <div className='impact-card-list'>
+                    {impact_cards.map(card => (
+                        <ImpactCard title={card.title} description={card.description}/>
+                    ))}
+                </div>
             </div>
         </section>
         <section className="teammember-section">
@@ -128,11 +151,24 @@ const AboutPage = () => {
 
 
 const LearningCard = ({tag, title, description}) => {
-    return (<div>
-        <div className='tag'>{tag}</div>
-        <h3 className='font-bold'>{title}</h3>
-        <p className='text-body3 p-text'>{description}</p>
+    return (<div className='learning-card'>
+            <div className='tag'>{tag}</div>
+            <div className='text-container'>
+                <h3 className='font-bold'>{title}</h3>
+                <p className='text-body3 p-text'>{description}</p>
+            </div>
     </div>);
+}
+
+const ImpactCard = ({title, description}) => {
+    return (
+        <div>
+            <div className='impact-card'>
+                <h2 className='title font-bold'>{title}</h2>
+                <div className='description'>{description}</div>
+            </div>
+        </div>
+    );
 }
 
 const MemberInfoCard = ({image, name, description}) => {

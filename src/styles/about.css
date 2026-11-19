@@ -79,10 +79,54 @@ section {
     gap: 15px;
 }
 
+.learning-cards-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.learning-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e7e4df;
+
+    &.text-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
 .impact-section .section-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.impact-card-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 5px;
+}
+
+.impact-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #e7e4df;
+    padding: 20px 25px;
+    gap: 5px;
+
+    & .title {
+        font-size: 32px;
+        color: var(--color-primary);
+    }
 }
 
 .teammember-section .section-container {
@@ -127,6 +171,15 @@ section {
 }
 
 @media (min-width: 37.5rem) {
+    .learning-cards-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .impact-card-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
     
 }
 
@@ -157,6 +210,26 @@ section {
     }
     .problem-section .left-container {
         width: 600px;
+    }
+
+    .learning-cards-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* need to change this*/
+        gap: 14px;
+    }
+
+    .learning-card {
+        padding: 30px;
+    
+        &.text-container {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+    }
+
+    .impact-card-list {
+        grid-template-columns: repeat(4, 1fr); /* need to change this */
     }
 
     .teammember-section .section-container { 
