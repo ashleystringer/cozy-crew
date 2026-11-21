@@ -51,6 +51,33 @@ section {
     overflow: hidden;
 }
 
+.hero-figure {
+    position: relative;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .hero-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .hero-caption {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 55%;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    font-style: italic;
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    font-family: var(--font-serif);
+    line-height: 1.5;
+    color: #1a1a1a;
+  }
+
 .mission-section {
     background: #eee8f9;
 }
@@ -87,6 +114,7 @@ section {
   }
   
   .quote-text {
+    font-family: var(--font-serif);
     flex: 1;
     margin: 0;
   }
@@ -292,6 +320,11 @@ section {
         padding: 35px 25px;
     }
 
+    .hero-caption {
+        font-size: clamp(0.875rem, 2vw, 1.125rem);
+        padding: 1.25rem 1.5rem;
+      }
+
     .story-section .section-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -346,6 +379,10 @@ section {
     .left-container-hero {
         width: 600px;
     }
+
+    .hero-caption {
+        font-size: clamp(0.875rem, 1.2vw, 1.125rem);
+      }
 
     .story-section .section-container {
         width: min(100%, 1436px);

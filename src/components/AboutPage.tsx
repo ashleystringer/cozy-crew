@@ -69,9 +69,13 @@ const AboutPage = () => {
                     </div>
                 </div>
                 <div className='image-container'>
-                    <ImageAsset asset={hero_about_women_laptop} alt="image of two women with a laptop"/>
+                    <figure className='hero-figure'>
+                        <ImageAsset asset={hero_about_women_laptop} alt="image of two women with a laptop" />
+                        <figcaption className='hero-caption'>
+                            The future of work should be shaped by more women and other people of underrepresented genders, not fewer.
+                        </figcaption>
+                    </figure>
                 </div>
-            
             </div>
         </section>
         <section className="mission-section">
@@ -92,7 +96,7 @@ const AboutPage = () => {
                 <h2 className='font-bold'>Promptful was born after we had heard one recurring question: “Where do I start?”</h2>
                     <p className='text-body2 p-text'>We at Promptful found that many women and other people of underrepresented genders across healthcare, education, UX, strategy, and other fields felt the same concern. They knew AI would shape their work, but they did not trust it. Not all jobs provided AI training either, so many women and their peers also didn’t have time to take lessons outside work. They worried about the careers they had worked so hard to build.</p>
                     <p className='text-body2 p-text'>That’s why we created Promptful. Women and their peers need a place that cares about their learning and focuses on the person, not the tool. With our lessons and communities close by for support, these women and their peers have a place to prepare themselves for their new future.</p>
-                    <blockquote className='quote'><span className='quote-flourish' aria-hidden="true"/><div className='quote-text'>“Women and their peers need a place that cares about their learning and focuses on the person, not the tool.”</div></blockquote>
+                    <blockquote className='quote'><span className='quote-flourish' aria-hidden="true"/><div className='quote-text font-bold'><em>“Women and their peers need a place that cares about their learning and focuses on the person, not the tool.”</em></div></blockquote>
                 </div>
             </div>
         </section>
@@ -128,8 +132,8 @@ const AboutPage = () => {
                 <div className='right-container'>
                     <div className='progress-bar-container'>
                         <h3>The opportunity gap, in context:</h3>
-                        <ProgressBar label='Women and their peers using AI tools at work' progressValue={40}/>
-                        <ProgressBar label='Women and their peers represented in AI leadership' progressValue={40}/>
+                        <ProgressBar label='Women and their peers using AI tools at work' progressValue={59}/>
+                        <ProgressBar label='Women and their peers represented in AI leadership' progressValue={28}/>
                     </div>
                 </div>
             </div>
